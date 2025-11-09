@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PixSoul - Login & Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-body">
+  <div class="auth-wrapper">
+    <div class="left-side">
+      <div class="logo-container">
+        <img src="assets/nav-logo.png" alt="PixSoul Logo" class="pixsoul-logo">
+      </div>
+      <h2 class="tagline">Every pixel has a story.</h2>
+      <h2 class="tagline">Every story has a soul.</h2>
+      <p>Step into <span>PixSoul</span> — your digital world of emotions and memories.</p>
+      <div class="floating-gallery">
+        <img src="assets/image1.png" alt="memory1" />
+        <img src="assets/image2.png" alt="memory2" />
+        <img src="assets/image3.png" alt="memory3" />
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="auth-container">
+        <!-- LOGIN -->
+        <div id="loginSection">
+          <h1>Welcome Back</h1>
+          <p class="login-sub">Log in to your SoulGallery</p>
+
+          <form id="loginForm" autocomplete="off">
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="password" name="password" placeholder="Password" required />
+            <button class="btn" type="submit">Login</button>
+          </form>
+
+          <p>Don’t have an account? <a href="#" id="showSignup">Sign up</a></p>
+          <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+          <div id="loginMessage"></div>
+        </div>
+
+        <!-- SIGNUP -->
+        <div id="signupSection" style="display: none;">
+          <button id="backToLoginFromSignup" class="back-login-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          <h1>Join PixSoul</h1>
+          <p class="login-sub">Create your SoulGallery — where every picture tells your story.</p>
+
+          <form id="signupForm" autocomplete="off">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="file" name="profileImage" id="profileImage" accept="image/*" required>
+            <button class="btn" type="submit">Sign Up</button>
+          </form>
+          <div id="signupMessage"></div>
+        </div>
+
+        <!-- FORGOT PASSWORD -->
+        <div id="forgotSection" style="display:none;">
+          <button id="backToLoginFromForgot" class="back-login-btn"><i class="fa-solid fa-arrow-left"></i></button>
+          <h1>Reset Password</h1>
+
+          <div id="forgotStep1">
+            <input type="email" id="resetEmail" placeholder="Enter your email" required />
+            <button class="btn" id="sendResetOtp">Send OTP</button>
+          </div>
+
+          <div id="forgotStep2" style="display:none;">
+            <input type="text" id="resetOtp" placeholder="Enter OTP" required />
+            <input type="password" id="newPassword" placeholder="New Password" required />
+            <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required />
+            <button class="btn" id="resetPassword">Reset Password</button>
+          </div>
+
+          <div id="forgotMessage"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixSoul</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-body">
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2>PixSoul</h2>
+      <!-- Hamburger button -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/feed.html">Feed</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/upload.html">Upload</a></li>
+        <li class="profile-dropdown">
+          <div class="profile-trigger">
+            <img src="uploads/default.png" alt="Profile" class="profile-icon-img">
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </div>
+
+          <div class="dropdown-menu">
+            <div class="profile-header">
+              <img src="uploads/default.png" alt="Profile" class="profile-photo">
+              <p class="user-name">Loading...</p>
+              <p class="user-email">Please wait</p>
+            </div>
+            <hr>
+            <a href="/logout" class="logout">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="logo">
+    <img src="assets/image.png" alt="Logo">
+  </div>
+  <div class="hero">
+    <h1>Welcome to PixSoul</h1>
+    <p class="tagline">Every pixel has a memory — every memory has a soul.</p>
+    <p class="description">PixSoul is your digital canvas — a place where emotions come alive through memories and moments.
+        Share your world, capture your feelings, and connect through the stories behind every image.
+        <p class="description-p">Because here, pixels don’t just create pictures — they carry souls.</p>
+    </p><br>
+    <a href="gallery.html" class="btn">Explore the Gallery</a>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>

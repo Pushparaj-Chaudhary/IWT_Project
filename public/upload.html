@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixSoul</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="upload-body">
+  <nav class="navbar">
+    <div class="nav-container">
+      <img class="navbar-logo-img" src="assets/logo.png" alt="Logo">
+       <!-- Hamburger button -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/feed.html">Feed</a></li>
+        <li><a href="/gallery.html">Gallery</a></li>
+        <li><a href="/upload.html">Upload</a></li>
+        <li class="profile-dropdown">
+          <div class="profile-trigger">
+            <!-- 🖼️ Default image (will be replaced dynamically) -->
+            <img src="uploads/default.png" alt="Profile" class="profile-icon-img">
+            <i class="fas fa-chevron-down dropdown-arrow"></i>
+          </div>
+
+          <!-- 🧠 Dropdown content will be filled dynamically by JS -->
+          <div class="dropdown-menu">
+            <div class="profile-header">
+              <img src="uploads/default.png" alt="Profile" class="profile-photo">
+              <p class="user-name">Loading...</p>
+              <p class="user-email">Please wait</p>
+            </div>
+            <hr>
+            <a href="/logout" class="logout">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="upload-container">
+    <h1>Share Your Memory</h1>
+    <form id="uploadForm" action="/api/upload" method="POST" enctype="multipart/form-data">
+      <textarea name="caption" placeholder="Caption your memory..." required></textarea>
+      <select name="emotion" required>
+        <option value="">Select Emotion</option>
+        <option value="Joy">Joy</option>
+        <option value="Nostalgia">Nostalgia</option>
+        <option value="Love">Love</option>
+        <option value="Peace">Peace</option>
+        <option value="Hope">Hope</option>
+      </select>
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Upload Memory</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
